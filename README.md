@@ -48,6 +48,11 @@
    </a>
  </p>
  <p>
+  <a href="https://ilegra.com/blog/apache-airflow-maestro-de-pipelines-de-tarefas-agendadas/#:~:text=O%20que%20o%20Airflow%20%C3%A9,de%20sequenciamento%20definidas%2C%20chamados%20DAGs.">
+    Apache Airflow: maestro de pipelines de tarefas agendadas
+  </a>
+ </p>
+ <p>
    <a href="https://innowise.com/pt/blog/apache-airflow-introduction/"> 
    O guia definitivo de Apache Airflow
    </a>
