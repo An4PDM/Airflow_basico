@@ -18,14 +18,17 @@
 <p> Uma frase de um artigo da Medium sobre o Airflow, me fez refletir sobre a complexidade de certas ferramentas de ETL:
 "Para a grande maioria dos cenários, uma infraestrutura de ETL simples, com scripts bem escritos e bem documentada é muito mais do que o suficiente."
 </p>
-<p> O Airflow é exatamente isso: uma infraestrutura simples e bem documentada.</p>
+<p> O Airflow é exatamente isso: uma infraestrutura simples e bem documentada que facilita a vida dos profissionais de dados.</p>
 
 ### *Pipelines*
 <p> Uma pipeline consiste em um conjunto de tarefas ou ações feitas em sequência para atingir um resultado. </p>
 <p> No airflow, uma pipeline é representada como uma DAG (Grafo Acíclico Direcionado). As DAGs são criadas em Python de forma simples e com poucas linhas de código. </p>
 
 ### *Principais componentes do Airflow*
-<p> </p>
+<p> Webserver: Fornece uma interface gráfica intuitiva aos usuários; </p>
+<p> Scheduler: Permite a execução de forma programada das dags. O scheduler é como se fosse o "coração" do Airflow; </p>
+<p> Metadata: Se refere ao armazenamento de todos os dados do Airflow. É como o "cérebro" do Airflow; </p>
+<p> Executor: Executa as tarefas agendadas pelo Scheduler. </p>
 
 
 <p> Referências: 
