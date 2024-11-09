@@ -6,11 +6,14 @@
 <p> Checklist de conteúdos: </p>
 <ul>
   <li> Conceitos fundamentais; </li>
+  <li> Principais componentes do Airflow; </li>
   <li> Como configurar o sistema; </li>
-  <li> Entendendo a interface do Airflow; </li>
-  <li> Criando sua primeira DAG; </li>
-  <li> Operadores. </li>
+  <li> Entendendo a interface do Airflow; </li>  
+  <li> Operadores; </li>
+  <li> Criando sua primeira DAG. </li>
 </ul>
+
+##
 
 ## *Conceitos fundamentais*
 <p> O Airflow nada mais é do que uma ferramenta de orquestração de workflows (fluxos de trabalho), ou seja, ele permite que o usuário defina "sequências" de atividades relacionadas a dados, sendo possível agendar tasks (tarefas) e executar processos. </p>
@@ -25,16 +28,21 @@
 <p> No airflow, uma pipeline é representada como uma DAG (Grafo Acíclico Direcionado). As DAGs são criadas em Python de forma simples e com poucas linhas de código. </p>
 
 ### *LOGs*
-<p> </p>
+<p> Os LOGs do Airflow são documentos como informações detalhadas de cada DAG. Nesses documentos, estão presentes o horário de funcionamento das tasks, status da tarefa (se foi bem sucedida ou se ocorreu alguma falha), mensagens de erro e os resultados. </p>
+<p> Caso sua DAG apresente algum problema, você pode consultar os LOGs para entender o que aconteceu no meio da execução.</p>
 
 ### *Tasks*
-<p> </p>
+<p> As tasks são as unidades de trabalho do Airflow. São justamente as tarefas que devem ser executadas, sendo definidas no corpo do código. Alguns exemplos de tasks são: envio de e-mails, print de mensagens, execução de código em Python, entre outros.</p>
 
-### *Principais componentes do Airflow*
+##
+
+## *Principais componentes do Airflow*
 <p> Webserver: Fornece uma interface gráfica intuitiva aos usuários; </p>
 <p> Scheduler: Permite a execução de forma programada das dags. O scheduler é como se fosse o "coração" do Airflow; </p>
 <p> Metadata: Se refere ao armazenamento de todos os dados do Airflow. É como o "cérebro" do Airflow; </p>
 <p> Executor: Executa as tarefas agendadas pelo Scheduler. </p>
+
+##
 
 ## *Como configurar o sistema*
 
@@ -44,6 +52,21 @@
     Instalando o Apache AIRFLOW no Ubuntu 
   </a>
 </p>
+
+##
+
+## *Operadores*
+<p> Os operadores são componentes que definem qual ferramenta será utilizada para executar as tasks. Ou seja, cada task será relacionada com um operador. Os principais operadores são:</p>
+
+**PythonOperator**  <p> - Chama uma função Python; </p>
+
+**BashOperator**  <p> - Executa um comando bash, ou seja, comandos do sistema operacional; </p>
+
+**EmailOperator** <p> - Envia um e-mail; </p>
+
+**DummyOperator** <p> - Serve apenas para indicar fim e início de uma DAG. </p>
+
+##
 
 ## *Criando sua primeira DAG*
 
@@ -127,7 +150,14 @@ with DAG(
 (inicia >> hello >> finaliza)
 ```
 
+##
+
 <p> Referências: 
+  <p>
+  <a href="https://airflow.apache.org/docs/">
+    Documentação Oficial do Airflow
+  </a>
+</p>
  <p>
   <a href="https://www.anselme.com.br/2023/08/09/o-basico-de-apache-airflow/#:~:text=O%20que%20%C3%A9%20DAG,-DAG%20%C3%A9%20o&text=O%20b%C3%A1sico%20do%20Apache%20Airflow%20inclui%20destacar%20que%20h%C3%A1%20uma,orquestradores%2C%20como%20o%20Apache%20Oozie."> 
     Básico de apache Airflow
